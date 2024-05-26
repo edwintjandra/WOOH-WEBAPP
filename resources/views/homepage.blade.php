@@ -5,41 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Landing Page - Start Bootstrap Theme</title>
+        <title>WOOH - The best water quality</title>
       
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
-        <style>
-            .nav-links a {
-                margin-left: 15px;
-                color: #333; 
-                text-decoration: none;
-            }
-            .nav-links a:hover {
-                color: #000; 
-            }
-        </style>
+        <link href="{{ asset('css/homepage.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href="#!">WOOH</a>
-                <div class="nav-links">
+        <nav class="custom-navbar">
+            <div class="custom-navbar-container">
+                <a class="custom-navbar-brand" href="/">WOOH</a>
+                <div class="custom-nav-links">
                     <a href="{{ route('water-machines.index') }}">Find Machines</a>
                     <a href="{{ route('water-packages.index') }}">Buy Packages</a>
                     <a href="{{ route('forum.index') }}">Forum</a>
                     <a href="{{ route('articles.index') }}">Articles</a>
                     <a href="{{ route('login') }}">Sign In</a>
                 </div>
-                
             </div>
         </nav>
+
         <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
