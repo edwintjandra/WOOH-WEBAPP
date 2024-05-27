@@ -24,7 +24,7 @@
                 <div class="custom-nav-links">
                     <a href="{{ route('water-machines.index') }}">Find Machines</a>
                     <a href="{{ route('water-packages.index') }}">Buy Packages</a>
-                    <a href="{{ route('forum.index') }}">Forum</a>
+                    {{-- <a href="{{ route('forum.index') }}">Forum</a> --}}
                     <a href="{{ route('articles.index') }}">Articles</a>
                     <a href="{{ route('login') }}">Sign In</a>
                 </div>
