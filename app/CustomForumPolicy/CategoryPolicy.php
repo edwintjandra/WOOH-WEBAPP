@@ -22,7 +22,7 @@ class CategoryPolicy
 
     public function deleteThreads($user, Category $category): bool
     {
-        return true;
+        return false;
     }
 
     public function restoreThreads($user, Category $category): bool

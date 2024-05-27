@@ -6,7 +6,7 @@ class ForumPolicy
 {
     public function createCategories($user): bool
     {
-        return true;
+        return false;
     }
 
     public function manageCategories($user): bool
@@ -17,12 +17,12 @@ class ForumPolicy
 
     public function moveCategories($user): bool
     {
-        return true;
+        return false;
     }
 
     public function renameCategories($user): bool
     {
-        return true;
+        return false;
     }
 
     public function markThreadsAsRead($user): bool
