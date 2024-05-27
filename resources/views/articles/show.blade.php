@@ -23,6 +23,17 @@
             padding:120px;
         }
 
+        .article-content {
+            width: 60%;
+            margin: auto;
+            margin-top:40px;
+        }
+
+        .image-header img {
+            height: 300px; 
+            width: 100%; 
+            object-fit: cover; 
+        }
     </style>
         
     </head>
@@ -45,44 +56,25 @@
        <div class="hero-header"  class="jumbotron bg-cover text-white">
         <div class="container py-5 text-center">
             <h1 class="display-4 font-weight-bold">{{ $article->title }}</h1>
-            <p class="font-italic mb-0">{{ $article->subtitle }}</p>
+            <p class="font-italic mb-0">
+              {{ $article->subtitle }}
+              <br>
+              Created At {{ $article->created_at->format('F j, Y') }}
+            </p>
          </div>
       </div>
- 
-     
-      <div class="container">
-          <div class="row">
-              <div class="col-md-12">
-                  <div class="jumbotron">
-                      <h1 class="display-4">{{ $article->title }}</h1>
-                      <p class="meta">Created At {{ $article->created_at->format('F j, Y') }}</p>
-                  </div>
-              </div>
-          </div>
-      
-          <div class="row">
-              <div class="col-md-8">
-                  <div class="article-content">
-                      <img src="{{ $article->image_url }}" alt="{{ $article->title }}" class="img-fluid">
-                      <p>{{ $article->content }}</p>
-                  </div>
-              </div>
-              
-              <div class="col-md-4">
-                  <div class="sidebar">
-                      <h3>Related Articles</h3>
-                      {{-- <ul class="list-group">
-                          @foreach($relatedArticles as $relatedArticle)
-                          <li class="list-group-item">
-                              <a href="{{ route('articles.show', $relatedArticle->id) }}">{{ $relatedArticle->title }}</a>
-                          </li>
-                          @endforeach
-                      </ul> --}}
-                  </div>
-              </div>
-          </div>
-      </div>
 
+    
+    
+      <div class="article-content">
+          <p>
+              {{ $article->content }}
+          </p>
+      </div>
+    
+ 
+      
+  
       <!-- Bootstrap core JS-->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
       <!-- Core theme JS-->
