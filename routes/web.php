@@ -25,6 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get('/articles/index',[ArticlesController::class,'index'])->name('articles.index');
+Route::get('/articles/{articleId}',[ArticlesController::class,'show'])->name('articles.show');
 Route::get('/forum/index',[ForumController::class,'index'])->name('forum.index');
 Route::get('/order/index',[OrderController::class,'index'])->name('order.index');
 Route::get('/water-machines/index',[WaterMachinesController::class,'index'])->name('water-machines.index');

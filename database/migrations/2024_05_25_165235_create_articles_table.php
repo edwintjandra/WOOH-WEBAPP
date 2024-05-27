@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('title'); 
             $table->string('subtitle'); 
+            $table->string('thumbnail_url'); 
             $table->text('content'); 
             $table->timestamps(); 
-            });
+        });
     }
 
     /**

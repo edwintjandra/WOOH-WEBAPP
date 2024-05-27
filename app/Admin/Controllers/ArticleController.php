@@ -29,6 +29,7 @@ class ArticleController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('title', __('Title'));
         $grid->column('subtitle', __('Subtitle'));
+        $grid->column('thumbnail_url', __('Thumbnail Url'));
 
         return $grid;
     }
@@ -47,6 +48,7 @@ class ArticleController extends AdminController
         $show->field('title', __('Title'));
         $show->field('subtitle', __('Subtitle'));
         $show->field('content', __('Content'));
+        $show->field('thumbnail_url', __('Thumbnail Url'));
 
         return $show;
     }
@@ -63,6 +65,7 @@ class ArticleController extends AdminController
         $form->text('title', __('Title'));
         $form->text('subtitle', __('Subtitle'));
         $form->textarea('content', __('Content'));
+        $form->textarea('thumbnail_url', __('Thumbnail Url'));
 
         return $form;
     }
