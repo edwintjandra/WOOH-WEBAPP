@@ -36,7 +36,11 @@
                     <a href="{{ route('water-packages.index') }}">Buy Packages</a>
                     <a href="/forum">Forum</a>
                     <a href="{{ route('articles.index') }}">Articles</a>
-                    <a href="{{ route('login') }}">Sign In</a>
+                    @if (Auth::check() )
+                        <a href="{{ route('profile.edit') }}">{{ Auth::user()->name }} <i class="fa-solid fa-user"></i></a>
+                    @else
+                        <a href="{{ route('login') }}">Sign In</a>
+                    @endif
                 </div>
             </div>
         </nav>

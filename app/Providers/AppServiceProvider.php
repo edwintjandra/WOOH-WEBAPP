@@ -35,9 +35,9 @@ class AppServiceProvider extends ServiceProvider
         Config::$is3ds = config('midtrans.is3ds');
 
         
-        if(config('app.env')==='local'){
-            URL::forceScheme('https');
-        }
+        // if(config('app.env')==='local'){
+        //     URL::forceScheme('https');
+        // }
         
     }
 }
