@@ -29,7 +29,6 @@ class WaterPackagesController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('name', __('Name'));
         $grid->column('description', __('Description'));
-        $grid->column('quantity', __('Quantity'));
         $grid->column('price', __('Price'));
         
 
@@ -49,7 +48,6 @@ class WaterPackagesController extends AdminController
         $show->field('id', __('Id'));
         $show->field('name', __('Name'));
         $show->field('description', __('Description'));
-        $show->field('quantity', __('Quantity'));
         $show->field('price', __('Price'));
         
 
@@ -67,7 +65,6 @@ class WaterPackagesController extends AdminController
 
         $form->text('name', __('Name'));
         $form->text('description', __('Description'));
-        $form->text('quantity', __('Quantity'));
         $form->decimal('price', __('Price'));
 
         return $form;

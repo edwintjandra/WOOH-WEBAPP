@@ -70,8 +70,13 @@
                             <div class="caption">
                                 <h3>{{ $waterPackage->name }}</h3>
                                 <p class="meta">Created At {{ $waterPackage->created_at->format('F j, Y') }}</p>
+                                <p class="meta">Rp {{ number_format($waterPackage->price, 2, ',', '.') }}</p>
                                 <p class="briefContent">{{ Str::limit($waterPackage->description, 100, '...') }}</p>
-                                <a href="#" class="btn btn-info">Buy Now</a>
+                                <form action="{{ route('order.store') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="water_package_id" value="{{ $waterPackage->id }}">
+                                    <button type="submit" class="btn btn-info">Buy Now</button>
+                                </form>
                             </div>
                         </div>
                     </div>

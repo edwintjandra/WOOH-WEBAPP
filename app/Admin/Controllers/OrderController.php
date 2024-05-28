@@ -28,7 +28,9 @@ class OrderController extends AdminController
         $grid = new Grid(new Order());
 
         $grid->column('id', __('Id'));
+        $grid->column('order_id', __('Order Id'));
         $grid->column('user_name', __('User name'));
+        $grid->column('user_phone', __('User phone'));
         $grid->column('package_name', __('Package name'));
         $grid->column('address', __('Address'));
         $grid->column('status', __('Status'));
@@ -48,7 +50,9 @@ class OrderController extends AdminController
         $show = new Show(Order::findOrFail($id));
 
         $show->field('id', __('Id'));
+        $grid->column('order_id', __('Order Id'));
         $show->field('user_name', __('User name'));
+        $grid->column('user_phone', __('User phone'));
         $show->field('package_name', __('Package name'));
         $show->field('address', __('Address'));
         $show->field('status', __('Status'));
@@ -66,9 +70,11 @@ class OrderController extends AdminController
     {
         $form = new Form(new Order());
 
+        $grid->column('order_id', __('Order Id'));
         $form->number('user_id', __('User id'));
         $form->number('water_package_id', __('Water package id'));
         $form->text('user_name', __('User name'));
+        $grid->column('user_phone', __('User phone'));
         $form->text('package_name', __('Package name'));
         $form->text('address', __('Address'));
         $form->text('status', __('Status'))->default('pending');

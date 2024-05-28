@@ -12,7 +12,6 @@ class WaterPackages extends Model
     protected $fillable=[
         'name',
         'description',
-        'quantity',
         'price'
     ];
 

@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('order_id')->unique();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('water_package_id');
             $table->string('user_name');
+            $table->string('user_phone');
             $table->string('package_name');
             $table->string('address');
-            $table->string('status')->default('pending');  
+            $table->enum('status', ['pending','paid','on-delivery', 'completed'])->default('pending');
             $table->double('total_price'); 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('water_package_id')->references('id')->on('water_packages')->onDelete('cascade');
